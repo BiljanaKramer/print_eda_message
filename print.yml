@@ -1,1 +1,8 @@
-
+- name: Playbook to print out the message
+  hosts: all
+  vars:
+    eda_message: "Hello to my Apache page!"
+  tasks:
+    - name: print this message
+      ansible.builtin.debug:
+        msg: "{{ eda_message }}"
